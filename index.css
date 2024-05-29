@@ -153,3 +153,9 @@ span {
 .red-border {
     border: 2px solid red;
 }
+
+.explain {
+    background-color: #00b7ff;
+    text-align: center;
+    padding: 15px;
+}

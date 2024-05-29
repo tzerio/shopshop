@@ -5,6 +5,8 @@ import Categories from "/pages/Categories"
 import ShoppingList from "/pages/ShoppingList"
 import { register } from "register-service-worker";
 
+register(`/service-worker.js`)
+
 function Layout() {
   return (
     <div className="container">
@@ -40,4 +42,3 @@ function App() {
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />)
 
-register(`/service-worker.js`)

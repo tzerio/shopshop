@@ -91,6 +91,7 @@ export default function Categories() {
     
     return (
         <div className="container category--manager">
+            {categories.length === 0 && <span>Lege zum Anfangen eine Kategorie an</span>}
             <form className="container category--form" onSubmit={handleNewCategorySubmit}>
                 <input type="text" placeholder="neue Kategorie..." value={newCategoryInput} onChange={handleCategoryChange}/>
                 <input className="button" type="submit" value="Hinzufügen" />
@@ -100,7 +101,7 @@ export default function Categories() {
                     <thead>
                     <tr>
                         <th>Kategorie</th>
-                        <th colSpan="3">anpassen</th>
+                        <th colSpan="3">Optionen</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -108,6 +109,9 @@ export default function Categories() {
                     </tbody>
                 </table>
             
+                <p className="explain">&#11014; Kategorie nach oben verschieben</p>
+                <p className="explain">&#11015; Kategorie nach unten verschieben</p>
+                <p className="explain">&otimes; Kategorie löschen</p>
             </div>
         </div>
     )

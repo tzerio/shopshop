@@ -63,6 +63,7 @@ export default function ShoppingList() {
     
     return (
         <div className="container">
+            
         <img src={imageURL} onClick={() => setShoppingMode(prev => !prev)} />
         {
             !shoppingMode &&
@@ -76,6 +77,10 @@ export default function ShoppingList() {
                     onChange={handleSelectChange}
                     value={currentInput.categoryIndex}
                 >
+                    {
+                        categories.length === 0 &&
+                        <option value="">Lege erst eine Kategorie an</option>
+                    }
                     {
                        selectOptions 
                     }
