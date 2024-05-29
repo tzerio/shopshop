@@ -123,11 +123,11 @@ select {
 .category--table {
     border-collapse: collapse;
     background-color: #1db5c0;
-    margin: 10px 20px;
+    margin: auto;
     width: 100%;
 }
 
-.category--table th, table td, table th {
+.category--table th, .category--table td {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -148,4 +148,8 @@ span {
     font-weight: bold;
     width: 30px;
     height: 30px;
+}
+
+.red-border {
+    border: 2px solid red;
 }

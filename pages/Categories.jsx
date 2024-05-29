@@ -53,6 +53,9 @@ export default function Categories() {
             return newCats
         })
     }
+    function deleteCategory(index) {
+        setCategories(prev => prev.filter((cat, id) => id !== index))
+    }
     const displayedCategories = categories.map((cat,index) => 
     <tr key={index}>
         <td>{cat.name} </td>
@@ -73,8 +76,15 @@ export default function Categories() {
                 className="arrow-button button"
                 onClick={() => moveDown(index)}>
                     &#11015; 
-                    </button>
+                </button>
         }
+        </td>
+        <td>
+            <button 
+                className="arrow-button button red-border"
+                onDoubleClick={() => deleteCategory(index)}>
+                    &otimes;
+                </button>
         </td>
     </tr>
     )
@@ -90,7 +100,7 @@ export default function Categories() {
                     <thead>
                     <tr>
                         <th>Kategorie</th>
-                        <th colSpan="2">anpassen</th>
+                        <th colSpan="3">anpassen</th>
                     </tr>
                     </thead>
                     <tbody>

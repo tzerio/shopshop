@@ -7,7 +7,7 @@ import { register } from "register-service-worker";
 
 function Layout() {
   return (
-    <div>
+    <div className="container">
       <nav className="nav--list">
          <Link  className="navbtn" to="/">ShoppingList</Link> 
          <Link className="navbtn" to="/categories">Kategorien</Link>
