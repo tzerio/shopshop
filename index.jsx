@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 import Categories from "/pages/Categories"
 import ShoppingList from "/pages/ShoppingList"
+import { register } from "register-service-worker";
 
 function Layout() {
   return (
@@ -38,3 +39,5 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+
+register(`/service-worker.js`)

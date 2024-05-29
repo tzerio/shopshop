@@ -65,7 +65,7 @@ export default function ShoppingList() {
         <div className="container">
         <img src={imageURL} onClick={() => setShoppingMode(prev => !prev)} />
         {
-            shoppingMode &&
+            !shoppingMode &&
             
             <form 
                 className="container shopping--form" 
